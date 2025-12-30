@@ -243,6 +243,13 @@
             overflow: hidden;
         }
 
+        .hero-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
         .hero-visual::after {
             content: '';
             position: absolute;
@@ -349,6 +356,12 @@
             overflow: hidden;
         }
 
+        .case-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .case-visual.case-1 {
             background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
         }
@@ -368,7 +381,17 @@
             transform: translate(-50%, -50%);
             font-size: 8rem;
             font-family: 'Noto Serif JP', serif;
-            color: rgba(0, 0, 0, 0.05);
+            color: rgba(255, 255, 255, 0.8);
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .case-visual::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
         }
 
         .case-content {
@@ -723,6 +746,10 @@
 
         /* ==================== RESPONSIVE ==================== */
         @media (max-width: 1024px) {
+            .section {
+                padding: 80px 0;
+            }
+
             .section-title {
                 font-size: 2.5rem;
             }
@@ -731,9 +758,17 @@
                 font-size: 3rem;
             }
 
+            .hero-description {
+                font-size: 1.125rem;
+            }
+
             .case-study {
                 gap: 48px;
                 margin-bottom: 120px;
+            }
+
+            .case-visual {
+                height: 350px;
             }
 
             .method-grid,
@@ -744,6 +779,10 @@
 
             nav {
                 gap: 32px;
+            }
+
+            .contact h2 {
+                font-size: 3.5rem;
             }
         }
 
@@ -760,7 +799,15 @@
             .container,
             .container-lg,
             .container-md {
-                padding: 0 16px;
+                padding: 0 20px;
+            }
+
+            header {
+                padding: 20px 0;
+            }
+
+            .logo {
+                font-size: 1.5rem;
             }
 
             nav {
@@ -772,12 +819,14 @@
             }
 
             .hero {
-                padding-top: 96px;
-                padding-bottom: 64px;
+                padding-top: 100px;
+                padding-bottom: 60px;
+                min-height: auto;
             }
 
             .hero h1 {
                 font-size: 2rem;
+                margin-bottom: 32px;
             }
 
             .hero-description {
@@ -785,9 +834,28 @@
                 margin-bottom: 48px;
             }
 
+            .ticker-container {
+                margin-top: 48px;
+            }
+
+            .ticker span {
+                font-size: 0.75rem;
+                padding: 0 20px;
+            }
+
             .hero-visual {
-                height: 300px;
-                margin-top: 64px;
+                height: 250px;
+                margin-top: 48px;
+            }
+
+            .philosophy p,
+            .contact-description {
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            .works-intro {
+                margin-bottom: 80px;
             }
 
             .case-study {
@@ -802,21 +870,136 @@
             }
 
             .case-visual {
-                height: 300px;
+                height: 280px;
+            }
+
+            .case-visual .case-number {
+                font-size: 5rem;
+            }
+
+            .case-content {
+                padding: 0;
             }
 
             .case-title {
                 font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            .case-description {
+                font-size: 0.9375rem;
+            }
+
+            .method-card,
+            .team-card {
+                padding: 32px 24px;
+            }
+
+            .method-card h3,
+            .team-role {
+                font-size: 1.25rem;
+            }
+
+            .method-card p {
+                font-size: 0.9375rem;
+            }
+
+            .method-number {
+                font-size: 3rem;
+                top: 20px;
+                right: 20px;
+            }
+
+            .team-avatar {
+                width: 64px;
+                height: 64px;
+            }
+
+            .team-avatar span {
+                font-size: 1.25rem;
+            }
+
+            .service-item span {
+                font-size: 1.125rem;
+            }
+
+            .service-item svg {
+                width: 20px;
+                height: 20px;
             }
 
             .contact h2 {
                 font-size: 2.5rem;
+                margin-bottom: 32px;
+            }
+
+            .cta-button {
+                padding: 16px 32px;
+                font-size: 1rem;
             }
 
             .footer-content {
                 flex-direction: column;
                 gap: 24px;
                 text-align: center;
+            }
+
+            .footer-logo {
+                font-size: 1.5rem;
+            }
+
+            .footer-social {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: 48px 0;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .container,
+            .container-lg,
+            .container-md {
+                padding: 0 16px;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero-description {
+                font-size: 0.9375rem;
+            }
+
+            .hero-visual {
+                height: 200px;
+            }
+
+            .case-visual {
+                height: 240px;
+            }
+
+            .case-title {
+                font-size: 1.25rem;
+            }
+
+            .case-description {
+                font-size: 0.875rem;
+            }
+
+            .contact h2 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 0.9375rem;
             }
         }
     </style>
@@ -865,7 +1048,9 @@
                         <span>CVR 130% imp.</span>
                     </div>
                 </div>
-                <div class="hero-visual"></div>
+                <div class="hero-visual">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=600&fit=crop&auto=format&q=80" alt="Team collaboration" loading="lazy">
+                </div>
             </div>
         </div>
         <div class="scroll-indicator"></div>
@@ -904,6 +1089,7 @@
             <!-- Case 1 -->
             <div class="case-study fade-in">
                 <div class="case-visual case-1">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop&auto=format&q=80" alt="Education - Students learning" loading="lazy">
                     <div class="case-number">01</div>
                 </div>
                 <div class="case-content">
@@ -923,6 +1109,7 @@
             <!-- Case 2 -->
             <div class="case-study fade-in">
                 <div class="case-visual case-2">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80" alt="Data Analysis - Business growth" loading="lazy">
                     <div class="case-number">02</div>
                 </div>
                 <div class="case-content">
@@ -942,6 +1129,7 @@
             <!-- Case 3 -->
             <div class="case-study fade-in">
                 <div class="case-visual case-3">
+                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop&auto=format&q=80" alt="Mobility - Transportation future" loading="lazy">
                     <div class="case-number">03</div>
                 </div>
                 <div class="case-content">
