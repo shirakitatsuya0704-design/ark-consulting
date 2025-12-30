@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARK - Integrated Growth Agency</title>
-    <meta name="description" content="PRによる「合意形成」と、デジタルによる「獲得効率」。その双方を実装し、ブランドをあるべき場所へ運ぶマーケティング・コレクティブ。">
+    <meta name="description" content="デジタル広告による「獲得効率」と、PRによる「合意形成」。その双方を実装し、ブランドをあるべき場所へ運ぶマーケティング・コレクティブ。">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -611,48 +611,38 @@
             background: #FAFAFA;
         }
 
-        .service-menu .container-md {
-            max-width: 800px;
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
         }
 
-        .service-list {
-            max-width: 640px;
-            margin: 0 auto;
-        }
-
-        .service-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 0;
-            border-bottom: 1px solid #D4D4D4;
+        .service-box {
+            border: 1px solid #E5E5E5;
+            padding: 48px 32px;
+            background: #FFFFFF;
+            text-align: center;
             transition: all 0.3s ease;
         }
 
-        .service-item:hover {
-            border-color: #171717;
+        .service-box:hover {
+            border-color: #A3A3A3;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
         }
 
-        .service-item span {
+        .service-box h3 {
             font-size: 1.5rem;
-            font-family: 'Noto Serif JP', serif;
-            font-weight: 500;
-            transition: transform 0.3s ease;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: 0.05em;
         }
 
-        .service-item:hover span {
-            transform: translateX(8px);
-        }
-
-        .service-item svg {
-            width: 24px;
-            height: 24px;
-            stroke: #A3A3A3;
-            transition: stroke 0.3s ease;
-        }
-
-        .service-item:hover svg {
-            stroke: #171717;
+        .service-box p {
+            font-size: 0.875rem;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #737373;
         }
 
         /* ==================== CONTACT SECTION ==================== */
@@ -772,7 +762,8 @@
             }
 
             .method-grid,
-            .team-grid {
+            .team-grid,
+            .service-grid {
                 grid-template-columns: 1fr;
                 gap: 24px;
             }
@@ -891,12 +882,14 @@
             }
 
             .method-card,
-            .team-card {
+            .team-card,
+            .service-box {
                 padding: 32px 24px;
             }
 
             .method-card h3,
-            .team-role {
+            .team-role,
+            .service-box h3 {
                 font-size: 1.25rem;
             }
 
@@ -917,15 +910,6 @@
 
             .team-avatar span {
                 font-size: 1.25rem;
-            }
-
-            .service-item span {
-                font-size: 1.125rem;
-            }
-
-            .service-item svg {
-                width: 20px;
-                height: 20px;
             }
 
             .contact h2 {
@@ -1031,11 +1015,11 @@
         <div class="container-lg">
             <div class="hero-content fade-in">
                 <h1>
-                    心を動かし、数字をつくる。<br>
+                    数字を動かし、心を掴む。<br>
                     <span class="subtitle">Integrated Growth Agency.</span>
                 </h1>
                 <p class="hero-description">
-                    両立しにくいBrand Marketing/PRとWEB Marketing。<br>
+                    デジタル広告による「獲得効率」と、PRによる「合意形成」。<br>
                     その双方を実装し、ブランドをあるべき場所へ運ぶマーケティング・コレクティブ。
                 </p>
                 <div class="hero-visual">
@@ -1056,8 +1040,8 @@
                     一過性のバズが、事業を支えるわけでもありません。
                 </p>
                 <p class="fade-in">
-                    今必要なのは、社会的な文脈を作る「広報（Public Relations）」と、<br>
-                    確実な成果を積み上げる「運用（Performance）」の統合です。
+                    今必要なのは、確実な成果を積み上げる「デジタル広告運用」と、<br>
+                    社会的な文脈を作る「広報（Public Relations）」の統合です。
                 </p>
                 <p class="fade-in">
                     ARKは、分断されがちなこの2つの領域をシームレスに接続。<br>
@@ -1073,34 +1057,14 @@
         <div class="container-lg">
             <div class="works-intro fade-in">
                 <h2 class="section-title">Works</h2>
-                <p>文脈と数値、その双方を実装した事例</p>
+                <p>数値と文脈、その双方を実装した事例</p>
             </div>
 
             <!-- Case 1 -->
             <div class="case-study fade-in">
                 <div class="case-visual case-1">
-                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop&auto=format&q=80" alt="Education - Students learning" loading="lazy">
-                    <div class="case-number">01</div>
-                </div>
-                <div class="case-content">
-                    <p class="case-category">Education (公教育×民間教育)</p>
-                    <h3 class="case-title">社会課題の解決を、集客の力に。</h3>
-                    <div class="case-tags">
-                        <span class="tag">Strategic PR</span>
-                        <span class="tag">LPO</span>
-                        <span class="tag">Ads</span>
-                    </div>
-                    <p class="case-description">
-                        「公教育と塾の橋渡し」という社会課題解決の文脈を設計。単なる宣伝ではなく「ニュース」として発信し、44メディアで露出。獲得した信頼をLPに実装し、CVRを130%改善。
-                    </p>
-                </div>
-            </div>
-
-            <!-- Case 2 -->
-            <div class="case-study fade-in">
-                <div class="case-visual case-2">
                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80" alt="Data Analysis - Business growth" loading="lazy">
-                    <div class="case-number">02</div>
+                    <div class="case-number">01</div>
                 </div>
                 <div class="case-content">
                     <p class="case-category">D2C / Pet Tech</p>
@@ -1112,6 +1076,26 @@
                     </div>
                     <p class="case-description">
                         徹底した数値分析に基づき、広告アカウント構造とLPを再構築。「穴の空いたバケツ」を塞ぎ、投資対効果（ROAS）を維持したまま売上昨対300%を達成。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="case-study fade-in">
+                <div class="case-visual case-2">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop&auto=format&q=80" alt="Education - Students learning" loading="lazy">
+                    <div class="case-number">02</div>
+                </div>
+                <div class="case-content">
+                    <p class="case-category">Education (公教育×民間教育)</p>
+                    <h3 class="case-title">社会課題の解決を、集客の力に。</h3>
+                    <div class="case-tags">
+                        <span class="tag">Strategic PR</span>
+                        <span class="tag">LPO</span>
+                        <span class="tag">Ads</span>
+                    </div>
+                    <p class="case-description">
+                        「公教育と塾の橋渡し」という社会課題解決の文脈を設計。単なる宣伝ではなく「ニュース」として発信し、44メディアで露出。獲得した信頼をLPに実装し、CVRを130%改善。
                     </p>
                 </div>
             </div>
@@ -1148,11 +1132,11 @@
                 <div class="method-card fade-in">
                     <div class="method-icon">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
-                    <h3>PR Consulting / Media Promote</h3>
-                    <p>社会やターゲットのインサイトを捉え、文脈を作る。</p>
+                    <h3>Digital Marketing</h3>
+                    <p>アルゴリズムをハックし、最適な配信を行う。データに基づいた広告運用で確実な成果を実現。</p>
                     <div class="method-number">01</div>
                 </div>
                 <div class="method-card fade-in">
@@ -1162,17 +1146,17 @@
                         </svg>
                     </div>
                     <h3>Branded Creative</h3>
-                    <p>ブランドの美学を守り、欲望を喚起する表現を作る。</p>
+                    <p>ブランドの美学を守り、欲望を喚起する表現を作る。一貫性のあるクリエイティブで信頼を構築。</p>
                     <div class="method-number">02</div>
                 </div>
                 <div class="method-card fade-in">
                     <div class="method-icon">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                         </svg>
                     </div>
-                    <h3>Digital Marketing</h3>
-                    <p>アルゴリズムをハックし、最適な配信を行う。</p>
+                    <h3>PR / Media Promote</h3>
+                    <p>社会やターゲットのインサイトを捉え、文脈を作る。メディア露出による信頼性の向上を実現。</p>
                     <div class="method-number">03</div>
                 </div>
             </div>
@@ -1217,26 +1201,20 @@
 
     <!-- ==================== SERVICE MENU SECTION ==================== -->
     <section class="section service-menu">
-        <div class="container-md">
+        <div class="container-lg">
             <h2 class="section-title fade-in">Service Menu</h2>
-            <div class="service-list">
-                <div class="service-item fade-in">
-                    <span>Strategic PR</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+            <div class="service-grid">
+                <div class="service-box fade-in">
+                    <h3>Digital Marketing</h3>
+                    <p>Meta広告、Google広告、LINE広告などの運用代行。データ分析に基づく最適化で、確実な成果を実現します。</p>
                 </div>
-                <div class="service-item fade-in">
-                    <span>Digital Marketing</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                <div class="service-box fade-in">
+                    <h3>Creative & Development</h3>
+                    <p>LP制作、バナー制作、動画制作。ブランドの世界観を守りながら、CVRを最大化するクリエイティブを提供します。</p>
                 </div>
-                <div class="service-item fade-in">
-                    <span>Creative & Development</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                <div class="service-box fade-in">
+                    <h3>Strategic PR</h3>
+                    <p>プレスリリース作成、メディアリレーション、インフルエンサー施策。社会的な文脈を作り、信頼性を向上させます。</p>
                 </div>
             </div>
         </div>
@@ -1248,7 +1226,7 @@
             <h2 class="fade-in">Board the Ark.</h2>
             <p class="contact-description fade-in">
                 現状の課題をお聞かせください。<br>
-                PRの切り口から広告運用まで、貴社のフェーズに合わせた最適なチームを編成します。
+                広告運用からPRの切り口まで、貴社のフェーズに合わせた最適なチームを編成します。
             </p>
             <button class="cta-button fade-in">
                 <span>Contact Form</span>
