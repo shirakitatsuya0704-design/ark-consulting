@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARK - Integrated Growth Agency</title>
-    <meta name="description" content="デジタル広告運用と戦略PRを統合し、売上拡大とブランド構築を同時に実現するマーケティング支援パートナー。">
+    <meta name="description" content="Digital MarketingとStrategic PRを統合し、売上拡大とブランド構築を同時に実現するマーケティング支援パートナー。">
     
     <link rel="icon" href="ark-growth-partners-favicon.png">
     
@@ -34,7 +34,6 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            /* 見出しもゴシック体に変更して視認性を向上 */
             font-family: 'Noto Sans JP', sans-serif;
             line-height: 1.4;
         }
@@ -64,7 +63,7 @@
         .section { padding: 96px 0; }
 
         .section-title {
-            font-size: 2.5rem; /* サイズを調整して実務的に */
+            font-size: 2.5rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 48px;
@@ -103,7 +102,7 @@
         }
 
         .logo-img {
-            height: 40px; /* ロゴ画像の高さ制限 */
+            height: 40px;
             width: auto;
         }
 
@@ -165,7 +164,7 @@
             width: 100%;
             max-width: 1000px;
             height: 400px;
-            border-radius: 8px; /* 角丸を少し入れて親しみやすく */
+            border-radius: 8px;
             margin: 48px auto 0;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
@@ -177,7 +176,7 @@
             object-fit: cover;
         }
 
-        /* ==================== CONCEPT SECTION (Renamed from Philosophy) ==================== */
+        /* ==================== CONCEPT SECTION ==================== */
         .concept {
             background: #F9FAFB;
         }
@@ -194,7 +193,7 @@
             line-height: 1.9;
             color: #333;
             margin-bottom: 32px;
-            text-align: left; /* 読みやすさのため左揃えに変更 */
+            text-align: left;
         }
         
         .concept strong {
@@ -248,7 +247,7 @@
         .case-category {
             font-size: 0.875rem;
             font-weight: 700;
-            color: #2563EB; /* アクセントカラー追加 */
+            color: #2563EB;
             margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -345,10 +344,9 @@
             color: #6B7280;
         }
 
-        /* ==================== CONTACT SECTION ==================== */
+        /* ==================== CONTACT SECTION (Added Styles) ==================== */
         .contact {
             background: #FFFFFF;
-            text-align: center;
         }
 
         .contact-description {
@@ -356,13 +354,68 @@
             color: #4B5563;
             margin: 0 auto 48px;
             max-width: 600px;
+            text-align: center;
         }
 
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
+        /* Form Styles */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #171717;
+        }
+        
+        .required {
+            color: #EF4444;
+            margin-left: 4px;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #E5E7EB;
+            border-radius: 4px;
+            background: #F9FAFB;
+            font-size: 1rem;
+            font-family: inherit;
+            color: #171717;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #171717;
+            background: #FFFFFF;
+            box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+        }
+
+        .form-select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234B5563'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px;
+        }
+
+        .submit-button {
+            display: block;
+            width: 100%;
             background: #171717;
             color: #FFFFFF;
             padding: 18px 48px;
@@ -370,11 +423,11 @@
             font-weight: 600;
             border-radius: 4px;
             transition: all 0.3s ease;
-            width: 100%;
-            max-width: 400px;
+            margin-top: 32px;
+            text-align: center;
         }
 
-        .cta-button:hover {
+        .submit-button:hover {
             background: #333;
             transform: translateY(-2px);
         }
@@ -402,7 +455,7 @@
             .hero h1 { font-size: 2.5rem; }
             .method-grid, .team-grid { grid-template-columns: 1fr; }
             .case-study { grid-template-columns: 1fr; gap: 32px; }
-            .case-study:nth-child(even) .case-visual { order: -1; } /* 画像を上に */
+            .case-study:nth-child(even) .case-visual { order: -1; }
             .case-study:nth-child(even) .case-content { order: 1; }
         }
 
@@ -411,6 +464,7 @@
             .mobile-menu { display: block; }
             .hero { padding-top: 100px; }
             .section-title { font-size: 2rem; }
+            .contact-form { padding: 0 8px; }
         }
     </style>
 </head>
@@ -593,14 +647,41 @@
 
     <section id="contact" class="section contact">
         <div class="container-md">
-            <h2 class="section-title fade-in">お問い合わせ</h2>
+            <h2 class="section-title fade-in">Contact</h2>
             <p class="contact-description fade-in">
                 マーケティングの課題について、まずはお気軽にご相談ください。<br>
                 現状の数値を分析し、貴社のフェーズに最適なプランをご提案します。
             </p>
-            <button class="cta-button fade-in">
-                お問い合わせフォームへ
-            </button>
+            
+            <form class="contact-form fade-in" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name" class="form-label">貴社名・お名前 <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="例: 株式会社ARK 山田太郎" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">メールアドレス <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="例: info@ark-consulting.co.jp" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="type" class="form-label">ご相談内容 <span class="required">*</span></label>
+                    <select id="type" name="type" class="form-select" required>
+                        <option value="" disabled selected>選択してください</option>
+                        <option value="ads">広告運用について</option>
+                        <option value="pr">PR・広報について</option>
+                        <option value="creative">クリエイティブ制作について</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">お問い合わせ詳細</label>
+                    <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="現状の課題やご要望をご記入ください"></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">送信する</button>
+            </form>
         </div>
     </section>
 
