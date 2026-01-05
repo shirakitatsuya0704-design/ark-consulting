@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARK - Integrated Growth Agency</title>
-    <meta name="description" content="デジタル広告による「獲得効率」と、PRによる「合意形成」。その双方を実装し、ブランドをあるべき場所へ運ぶマーケティング・コレクティブ。">
+    <meta name="description" content="デジタル広告運用と戦略PRを統合し、売上拡大とブランド構築を同時に実現するマーケティング支援パートナー。">
     
-    <!-- Google Fonts -->
+    <link rel="icon" href="ark-growth-partners-favicon.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <style>
         /* ==================== RESET & BASE ==================== */
@@ -33,8 +34,9 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Noto Serif JP', serif;
-            line-height: 1.3;
+            /* 見出しもゴシック体に変更して視認性を向上 */
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.4;
         }
 
         a {
@@ -54,49 +56,15 @@
             display: block;
         }
 
-        /* ==================== CUSTOM SCROLLBAR ==================== */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #F5F5F5;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #A3A3A3;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #737373;
-        }
-
         /* ==================== UTILITY CLASSES ==================== */
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .container-lg { max-width: 1440px; margin: 0 auto; padding: 0 24px; }
+        .container-md { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
-        .container-lg {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .container-md {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .section {
-            padding: 96px 0;
-        }
+        .section { padding: 96px 0; }
 
         .section-title {
-            font-size: 3.5rem;
+            font-size: 2.5rem; /* サイズを調整して実務的に */
             font-weight: 700;
             text-align: center;
             margin-bottom: 48px;
@@ -122,13 +90,10 @@
             right: 0;
             z-index: 1000;
             transition: all 0.3s ease;
-            padding: 24px 0;
-        }
-
-        header.scrolled {
+            padding: 20px 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
         .header-content {
@@ -137,36 +102,28 @@
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.875rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            transition: transform 0.2s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
+        .logo-img {
+            height: 40px; /* ロゴ画像の高さ制限 */
+            width: auto;
         }
 
         nav {
             display: flex;
-            gap: 48px;
+            gap: 40px;
         }
 
         nav a {
-            font-size: 0.875rem;
-            font-weight: 300;
-            letter-spacing: 0.05em;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #404040;
             transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #737373;
+            color: #000;
         }
 
-        .mobile-menu {
-            display: none;
-        }
+        .mobile-menu { display: none; }
 
         /* ==================== HERO SECTION ==================== */
         .hero {
@@ -174,140 +131,74 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-top: 128px;
+            padding-top: 120px;
             padding-bottom: 80px;
             position: relative;
-            overflow: hidden;
         }
 
         .hero-content {
             text-align: center;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: 0.05em;
-            margin-bottom: 48px;
-        }
-
-        .hero h1 .subtitle {
-            color: #737373;
+            line-height: 1.3;
+            margin-bottom: 32px;
+            color: #111;
         }
 
         .hero-description {
-            font-size: 1.25rem;
-            font-weight: 300;
+            font-size: 1.125rem;
+            font-weight: 400;
             line-height: 1.8;
             color: #404040;
-            margin-bottom: 64px;
+            margin-bottom: 48px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .ticker-container {
-            overflow: hidden;
-            margin-top: 80px;
-        }
-
-        .ticker {
-            display: flex;
-            white-space: nowrap;
-            animation: ticker 30s linear infinite;
-        }
-
-        .ticker span {
-            font-size: 0.875rem;
-            letter-spacing: 0.1em;
-            color: #737373;
-            padding: 0 32px;
-        }
-
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
         }
 
         .hero-visual {
             width: 100%;
             max-width: 1000px;
             height: 400px;
-            background: linear-gradient(135deg, #FAFAFA 0%, #E5E5E5 100%);
-            border-radius: 2px;
-            margin: 96px auto 0;
-            position: relative;
+            border-radius: 8px; /* 角丸を少し入れて親しみやすく */
+            margin: 48px auto 0;
             overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
         .hero-visual img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.6;
         }
 
-        .hero-visual::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.05);
+        /* ==================== CONCEPT SECTION (Renamed from Philosophy) ==================== */
+        .concept {
+            background: #F9FAFB;
         }
 
-        .scroll-indicator {
-            position: absolute;
-            bottom: 32px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1px;
-            height: 64px;
-            background: #D4D4D4;
-            overflow: hidden;
-        }
-
-        .scroll-indicator::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 32px;
-            background: #525252;
-            animation: scroll 2s ease-in-out infinite;
-        }
-
-        @keyframes scroll {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(32px); }
-        }
-
-        /* ==================== PHILOSOPHY SECTION ==================== */
-        .philosophy {
-            background: #FFFFFF;
-        }
-
-        .philosophy-content {
-            max-width: 960px;
+        .concept-content {
+            max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .philosophy p {
-            font-size: 1.125rem;
-            font-weight: 300;
-            line-height: 1.8;
-            color: #262626;
+        .concept p {
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.9;
+            color: #333;
             margin-bottom: 32px;
+            text-align: left; /* 読みやすさのため左揃えに変更 */
         }
-
-        .divider {
-            width: 96px;
-            height: 1px;
-            background: #D4D4D4;
-            margin: 64px auto 0;
+        
+        .concept strong {
+            background: linear-gradient(transparent 60%, #e2e8f0 60%);
         }
 
         /* ==================== WORKS SECTION ==================== */
@@ -317,15 +208,7 @@
 
         .works-intro {
             text-align: center;
-            margin-bottom: 144px;
-        }
-
-        .works-intro p {
-            font-size: 1.125rem;
-            font-weight: 300;
-            color: #737373;
-            max-width: 640px;
-            margin: 0 auto;
+            margin-bottom: 80px;
         }
 
         .case-study {
@@ -333,84 +216,48 @@
             grid-template-columns: 1fr 1fr;
             gap: 64px;
             align-items: center;
-            margin-bottom: 160px;
+            margin-bottom: 120px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 60px;
         }
 
         .case-study:last-child {
             margin-bottom: 0;
-        }
-
-        .case-study:nth-child(even) .case-visual {
-            order: 2;
-        }
-
-        .case-study:nth-child(even) .case-content {
-            order: 1;
+            border-bottom: none;
         }
 
         .case-visual {
             width: 100%;
-            height: 400px;
-            border-radius: 2px;
-            position: relative;
+            height: 360px;
+            border-radius: 8px;
             overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         .case-visual img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
         }
-
-        .case-visual.case-1 {
-            background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
-        }
-
-        .case-visual.case-2 {
-            background: linear-gradient(135deg, #F5F5F5 0%, #FAFAFA 100%);
-        }
-
-        .case-visual.case-3 {
-            background: linear-gradient(135deg, #FAFAFA 0%, #FFFFFF 100%);
-        }
-
-        .case-visual .case-number {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 8rem;
-            font-family: 'Noto Serif JP', serif;
-            color: rgba(255, 255, 255, 0.8);
-            z-index: 2;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .case-visual::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .case-content {
-            padding: 0 24px;
+        
+        .case-study:hover .case-visual img {
+            transform: scale(1.05);
         }
 
         .case-category {
-            font-size: 0.75rem;
-            letter-spacing: 0.15em;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #2563EB; /* アクセントカラー追加 */
+            margin-bottom: 12px;
             text-transform: uppercase;
-            color: #737373;
-            margin-bottom: 16px;
+            letter-spacing: 0.05em;
         }
 
         .case-title {
-            font-size: 2rem;
+            font-size: 1.75rem;
             font-weight: 700;
-            margin-bottom: 24px;
-            line-height: 1.3;
+            margin-bottom: 16px;
         }
 
         .case-tags {
@@ -421,37 +268,22 @@
         }
 
         .tag {
-            padding: 6px 16px;
+            padding: 4px 12px;
             font-size: 0.75rem;
-            background: #F5F5F5;
-            color: #404040;
-            border-radius: 999px;
-            letter-spacing: 0.05em;
+            background: #F3F4F6;
+            color: #4B5563;
+            border-radius: 4px;
         }
 
         .case-description {
             font-size: 1rem;
-            font-weight: 300;
+            color: #4B5563;
             line-height: 1.8;
-            color: #404040;
         }
 
         /* ==================== METHOD SECTION ==================== */
         .method {
-            background: #FAFAFA;
-        }
-
-        .method-intro {
-            text-align: center;
-            margin-bottom: 96px;
-        }
-
-        .method-intro p {
-            font-size: 1.125rem;
-            font-weight: 300;
-            color: #737373;
-            max-width: 640px;
-            margin: 0 auto;
+            background: #F9FAFB;
         }
 
         .method-grid {
@@ -461,90 +293,33 @@
         }
 
         .method-card {
-            border: 1px solid #E5E5E5;
-            padding: 48px;
             background: #FFFFFF;
-            transition: all 0.3s ease;
-            position: relative;
+            padding: 40px 32px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
         }
-
+        
         .method-card:hover {
-            border-color: #A3A3A3;
-        }
-
-        .method-icon {
-            width: 56px;
-            height: 56px;
-            background: #F5F5F5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 32px;
-            transition: all 0.3s ease;
-        }
-
-        .method-card:hover .method-icon {
-            background: #171717;
-        }
-
-        .method-icon svg {
-            width: 28px;
-            height: 28px;
-            stroke: #171717;
-            transition: stroke 0.3s ease;
-        }
-
-        .method-card:hover .method-icon svg {
-            stroke: #FFFFFF;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
         }
 
         .method-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 700;
             margin-bottom: 16px;
-            letter-spacing: 0.05em;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #F3F4F6;
         }
 
         .method-card p {
-            font-size: 1rem;
-            font-weight: 300;
-            line-height: 1.8;
-            color: #404040;
-        }
-
-        .method-number {
-            position: absolute;
-            top: 24px;
-            right: 24px;
-            font-size: 4rem;
-            font-family: 'Noto Serif JP', serif;
-            color: #F5F5F5;
-            transition: color 0.3s ease;
-        }
-
-        .method-card:hover .method-number {
-            color: #E5E5E5;
+            font-size: 0.95rem;
+            color: #4B5563;
+            line-height: 1.7;
         }
 
         /* ==================== TEAM SECTION ==================== */
-        .team {
-            background: #FFFFFF;
-        }
-
-        .team-intro {
-            text-align: center;
-            margin-bottom: 96px;
-        }
-
-        .team-intro p {
-            font-size: 1.25rem;
-            font-weight: 300;
-            line-height: 1.8;
-            color: #404040;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
         .team-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -552,97 +327,22 @@
         }
 
         .team-card {
-            border: 1px solid #E5E5E5;
-            padding: 40px;
-            transition: all 0.3s ease;
-        }
-
-        .team-card:hover {
-            border-color: #A3A3A3;
-        }
-
-        .team-avatar {
-            width: 80px;
-            height: 80px;
-            background: #F5F5F5;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            transition: all 0.3s ease;
-        }
-
-        .team-card:hover .team-avatar {
-            background: #171717;
-        }
-
-        .team-avatar span {
-            font-size: 1.5rem;
-            font-family: 'Noto Serif JP', serif;
-            color: #A3A3A3;
-            transition: color 0.3s ease;
-        }
-
-        .team-card:hover .team-avatar span {
-            color: #FFFFFF;
+            background: #fff;
+            padding: 32px;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
         }
 
         .team-role {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             font-weight: 700;
-            margin-bottom: 12px;
-            line-height: 1.4;
+            margin-bottom: 8px;
+            color: #111;
         }
 
         .team-background {
-            font-size: 0.875rem;
-            color: #737373;
-            letter-spacing: 0.05em;
-        }
-
-        .team-background strong {
-            color: #171717;
-            font-weight: 500;
-        }
-
-        /* ==================== SERVICE MENU SECTION ==================== */
-        .service-menu {
-            background: #FAFAFA;
-        }
-
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        .service-box {
-            border: 1px solid #E5E5E5;
-            padding: 48px 32px;
-            background: #FFFFFF;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .service-box:hover {
-            border-color: #A3A3A3;
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-        }
-
-        .service-box h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: 0.05em;
-        }
-
-        .service-box p {
-            font-size: 0.875rem;
-            font-weight: 300;
-            line-height: 1.8;
-            color: #737373;
+            font-size: 0.9rem;
+            color: #6B7280;
         }
 
         /* ==================== CONTACT SECTION ==================== */
@@ -651,55 +351,39 @@
             text-align: center;
         }
 
-        .contact h2 {
-            font-size: 4.5rem;
-            font-weight: 700;
-            margin-bottom: 48px;
-            letter-spacing: 0.05em;
-        }
-
         .contact-description {
-            font-size: 1.25rem;
-            font-weight: 300;
-            line-height: 1.8;
-            color: #404040;
-            max-width: 800px;
-            margin: 0 auto 64px;
+            font-size: 1.125rem;
+            color: #4B5563;
+            margin: 0 auto 48px;
+            max-width: 600px;
         }
 
         .cta-button {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             background: #171717;
             color: #FFFFFF;
-            padding: 20px 40px;
+            padding: 18px 48px;
             font-size: 1.125rem;
-            letter-spacing: 0.05em;
+            font-weight: 600;
+            border-radius: 4px;
             transition: all 0.3s ease;
+            width: 100%;
+            max-width: 400px;
         }
 
         .cta-button:hover {
-            background: #262626;
-            transform: scale(1.05);
-        }
-
-        .cta-button svg {
-            width: 20px;
-            height: 20px;
-            stroke: currentColor;
-            transition: transform 0.3s ease;
-        }
-
-        .cta-button:hover svg {
-            transform: translateX(4px);
+            background: #333;
+            transform: translateY(-2px);
         }
 
         /* ==================== FOOTER ==================== */
         footer {
-            background: #171717;
+            background: #1F2937;
             color: #FFFFFF;
-            padding: 64px 0;
+            padding: 48px 0;
         }
 
         .footer-content {
@@ -707,299 +391,42 @@
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .footer-logo {
-            font-size: 1.875rem;
             font-weight: 700;
-            letter-spacing: 0.1em;
-        }
-
-        .footer-copyright {
-            font-size: 0.875rem;
-            color: #A3A3A3;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 24px;
-        }
-
-        .footer-social a {
-            font-size: 0.875rem;
-            color: #A3A3A3;
-            transition: color 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            color: #FFFFFF;
+            font-size: 1.5rem;
         }
 
         /* ==================== RESPONSIVE ==================== */
         @media (max-width: 1024px) {
-            .section {
-                padding: 80px 0;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero-description {
-                font-size: 1.125rem;
-            }
-
-            .case-study {
-                gap: 48px;
-                margin-bottom: 120px;
-            }
-
-            .case-visual {
-                height: 350px;
-            }
-
-            .method-grid,
-            .team-grid,
-            .service-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            nav {
-                gap: 32px;
-            }
-
-            .contact h2 {
-                font-size: 3.5rem;
-            }
+            .hero h1 { font-size: 2.5rem; }
+            .method-grid, .team-grid { grid-template-columns: 1fr; }
+            .case-study { grid-template-columns: 1fr; gap: 32px; }
+            .case-study:nth-child(even) .case-visual { order: -1; } /* 画像を上に */
+            .case-study:nth-child(even) .case-content { order: 1; }
         }
 
         @media (max-width: 768px) {
-            .section {
-                padding: 64px 0;
-            }
-
-            .section-title {
-                font-size: 2rem;
-                margin-bottom: 32px;
-            }
-
-            .container,
-            .container-lg,
-            .container-md {
-                padding: 0 20px;
-            }
-
-            header {
-                padding: 20px 0;
-            }
-
-            .logo {
-                font-size: 1.5rem;
-            }
-
-            nav {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .hero {
-                padding-top: 100px;
-                padding-bottom: 60px;
-                min-height: auto;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-                margin-bottom: 32px;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-                margin-bottom: 48px;
-            }
-
-            .ticker-container {
-                margin-top: 48px;
-            }
-
-            .ticker span {
-                font-size: 0.75rem;
-                padding: 0 20px;
-            }
-
-            .hero-visual {
-                height: 250px;
-                margin-top: 48px;
-            }
-
-            .philosophy p,
-            .contact-description {
-                font-size: 1rem;
-                line-height: 1.8;
-            }
-
-            .works-intro {
-                margin-bottom: 80px;
-            }
-
-            .case-study {
-                grid-template-columns: 1fr;
-                gap: 32px;
-                margin-bottom: 80px;
-            }
-
-            .case-study:nth-child(even) .case-visual,
-            .case-study:nth-child(even) .case-content {
-                order: 0;
-            }
-
-            .case-visual {
-                height: 280px;
-            }
-
-            .case-visual .case-number {
-                font-size: 5rem;
-            }
-
-            .case-content {
-                padding: 0;
-            }
-
-            .case-title {
-                font-size: 1.5rem;
-                margin-bottom: 20px;
-            }
-
-            .case-description {
-                font-size: 0.9375rem;
-            }
-
-            .method-card,
-            .team-card,
-            .service-box {
-                padding: 32px 24px;
-            }
-
-            .method-card h3,
-            .team-role,
-            .service-box h3 {
-                font-size: 1.25rem;
-            }
-
-            .method-card p {
-                font-size: 0.9375rem;
-            }
-
-            .method-number {
-                font-size: 3rem;
-                top: 20px;
-                right: 20px;
-            }
-
-            .team-avatar {
-                width: 64px;
-                height: 64px;
-            }
-
-            .team-avatar span {
-                font-size: 1.25rem;
-            }
-
-            .contact h2 {
-                font-size: 2.5rem;
-                margin-bottom: 32px;
-            }
-
-            .cta-button {
-                padding: 16px 32px;
-                font-size: 1rem;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                gap: 24px;
-                text-align: center;
-            }
-
-            .footer-logo {
-                font-size: 1.5rem;
-            }
-
-            .footer-social {
-                flex-direction: column;
-                gap: 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .section {
-                padding: 48px 0;
-            }
-
-            .section-title {
-                font-size: 1.75rem;
-            }
-
-            .container,
-            .container-lg,
-            .container-md {
-                padding: 0 16px;
-            }
-
-            .hero h1 {
-                font-size: 1.75rem;
-            }
-
-            .hero-description {
-                font-size: 0.9375rem;
-            }
-
-            .hero-visual {
-                height: 200px;
-            }
-
-            .case-visual {
-                height: 240px;
-            }
-
-            .case-title {
-                font-size: 1.25rem;
-            }
-
-            .case-description {
-                font-size: 0.875rem;
-            }
-
-            .contact h2 {
-                font-size: 2rem;
-            }
-
-            .cta-button {
-                padding: 14px 28px;
-                font-size: 0.9375rem;
-            }
+            nav { display: none; }
+            .mobile-menu { display: block; }
+            .hero { padding-top: 100px; }
+            .section-title { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
-    <!-- ==================== HEADER ==================== -->
     <header id="header">
         <div class="container-lg">
             <div class="header-content">
-                <a href="#" class="logo">ARK</a>
+                <a href="#" class="logo">
+                    <img src="ark-consulting-logo.png" alt="ARK Consulting" class="logo-img">
+                </a>
                 <nav>
-                    <a href="#philosophy">Philosophy</a>
-                    <a href="#works">Works</a>
-                    <a href="#method">Method</a>
-                    <a href="#team">Team</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#concept">ARKについて</a>
+                    <a href="#works">支援実績</a>
+                    <a href="#method">強み・手法</a>
+                    <a href="#team">メンバー</a>
+                    <a href="#contact">お問い合わせ</a>
                 </nav>
                 <button class="mobile-menu">
                     <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1010,265 +437,198 @@
         </div>
     </header>
 
-    <!-- ==================== HERO SECTION ==================== -->
     <section class="hero">
         <div class="container-lg">
             <div class="hero-content fade-in">
                 <h1>
-                    数字を動かし、心を掴む。<br>
-                    <span class="subtitle">Integrated Growth Agency.</span>
+                    広告運用 × 戦略PRで、<br>
+                    事業の「売上」と「信頼」を伸ばす。
                 </h1>
                 <p class="hero-description">
-                    デジタル広告による「獲得効率」と、PRによる「合意形成」。<br>
-                    その双方を実装し、ブランドをあるべき場所へ運ぶマーケティング・コレクティブ。
+                    CPAの高騰や獲得効率の低下にお悩みではありませんか？<br>
+                    ARKは、確実な成果を出す「デジタル広告」と、指名検索を増やす「PR」を統合。<br>
+                    一過性の刈り取りではなく、持続的に成長するマーケティング基盤を構築します。
                 </p>
                 <div class="hero-visual">
-                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=600&fit=crop&auto=format&q=80" alt="Team collaboration" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=600&fit=crop&auto=format&q=80" alt="データ分析に基づいたミーティング風景" loading="lazy">
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator"></div>
     </section>
 
-    <!-- ==================== PHILOSOPHY SECTION ==================== -->
-    <section id="philosophy" class="section philosophy">
+    <section id="concept" class="section concept">
         <div class="container-md">
-            <h2 class="section-title fade-in">The Missing Piece.</h2>
-            <div class="philosophy-content">
+            <h2 class="section-title fade-in">Why ARK?</h2>
+            <div class="concept-content">
                 <p class="fade-in">
-                    良いプロダクトが、必ずしも売れるわけではありません。<br>
-                    一過性のバズが、事業を支えるわけでもありません。
+                    <strong>「良い商品なのに、広告費ばかりかさむ」<br>
+                    「PRで話題になったが、売上につながっていない」</strong>
                 </p>
                 <p class="fade-in">
-                    今必要なのは、確実な成果を積み上げる「デジタル広告運用」と、<br>
-                    社会的な文脈を作る「広報（Public Relations）」の統合です。
+                    多くの企業で起きている問題は、広告（獲得）とPR（認知）が分断されていることです。<br>
+                    広告代理店はCPAしか見ず、PR会社は露出数しか追わないため、事業全体の成長機会を逃しています。
                 </p>
                 <p class="fade-in">
-                    ARKは、分断されがちなこの2つの領域をシームレスに接続。<br>
-                    一貫したストーリーで顧客の心を動かし、事業成長の航路を描きます。
+                    ARKは、この2つの領域を1つのチームで実行します。<br>
+                    社会的な信頼を獲得して指名検索を増やし（PR）、<br>
+                    高まった関心を効率よく獲得につなげる（広告）。<br>
+                    この両輪を回すことで、<strong>広告費対効果（ROAS）を最大化</strong>させます。
                 </p>
-                <div class="divider fade-in"></div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== WORKS SECTION ==================== -->
     <section id="works" class="section works">
         <div class="container-lg">
             <div class="works-intro fade-in">
-                <h2 class="section-title">Works</h2>
-                <p>数値と文脈、その双方を実装した事例</p>
+                <h2 class="section-title">Case Study</h2>
+                <p>具体的な支援実績と成果</p>
             </div>
 
-            <!-- Case 1 -->
             <div class="case-study fade-in">
-                <div class="case-visual case-1">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80" alt="Data Analysis - Business growth" loading="lazy">
-                    <div class="case-number">01</div>
+                <div class="case-visual">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80" alt="データ分析画面" loading="lazy">
                 </div>
                 <div class="case-content">
-                    <p class="case-category">D2C / Pet Tech</p>
-                    <h3 class="case-title">感性ではなく、データでスケールさせる。</h3>
+                    <p class="case-category">D2C / ペットテック事業</p>
+                    <h3 class="case-title">データ分析でCPAを改善し、<br>売上昨対300%を達成</h3>
                     <div class="case-tags">
-                        <span class="tag">Data Analysis</span>
-                        <span class="tag">Meta Ads</span>
-                        <span class="tag">Scaling</span>
-                    </div>
-                    <p class="case-description">
-                        徹底した数値分析に基づき、広告アカウント構造とLPを再構築。「穴の空いたバケツ」を塞ぎ、投資対効果（ROAS）を維持したまま売上昨対300%を達成。
-                    </p>
-                </div>
-            </div>
-
-            <!-- Case 2 -->
-            <div class="case-study fade-in">
-                <div class="case-visual case-2">
-                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop&auto=format&q=80" alt="Education - Students learning" loading="lazy">
-                    <div class="case-number">02</div>
-                </div>
-                <div class="case-content">
-                    <p class="case-category">Education (公教育×民間教育)</p>
-                    <h3 class="case-title">社会課題の解決を、集客の力に。</h3>
-                    <div class="case-tags">
-                        <span class="tag">Strategic PR</span>
+                        <span class="tag">Meta広告運用</span>
                         <span class="tag">LPO</span>
-                        <span class="tag">Ads</span>
+                        <span class="tag">データ分析</span>
                     </div>
                     <p class="case-description">
-                        「公教育と塾の橋渡し」という社会課題解決の文脈を設計。単なる宣伝ではなく「ニュース」として発信し、44メディアで露出。獲得した信頼をLPに実装し、CVRを130%改善。
+                        感覚的な運用をやめ、徹底した数値分析に基づきアカウント構造を再構築。離脱の多いLP（ランディングページ）も同時に改修することで「穴の空いたバケツ」を塞ぎ、広告費を増やしてもCPA（獲得単価）を維持できる体制を実現しました。
                     </p>
                 </div>
             </div>
 
-            <!-- Case 3 -->
             <div class="case-study fade-in">
-                <div class="case-visual case-3">
-                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop&auto=format&q=80" alt="Mobility - Transportation future" loading="lazy">
-                    <div class="case-number">03</div>
+                <div class="case-visual">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop&auto=format&q=80" alt="教育現場" loading="lazy">
                 </div>
                 <div class="case-content">
-                    <p class="case-category">Mobility Startup</p>
-                    <h3 class="case-title">新しい移動文化を、世界観と共に実装する。</h3>
+                    <p class="case-category">教育事業（民間教育）</p>
+                    <h3 class="case-title">戦略PRで44メディア掲載。<br>信頼獲得でCVR1.3倍へ</h3>
                     <div class="case-tags">
-                        <span class="tag">Branding</span>
-                        <span class="tag">Creative Direction</span>
+                        <span class="tag">プレスリリース</span>
+                        <span class="tag">メディアリレーション</span>
+                        <span class="tag">信頼性向上</span>
                     </div>
                     <p class="case-description">
-                        認知から獲得まで、ブランドのトーン＆マナーを一貫。「機能」ではなく「体験」を売るクリエイティブで、潜在顧客の衝動を喚起。
+                        単なるサービス紹介ではなく、「公教育と民間教育の連携」という社会的文脈でニュースを設計。TVや新聞を含む多数のメディア露出を獲得しました。その実績をLPに掲載することで顧客の信頼度が上がり、広告の獲得率（CVR）が大幅に向上しました。
+                    </p>
+                </div>
+            </div>
+
+            <div class="case-study fade-in">
+                <div class="case-visual">
+                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop&auto=format&q=80" alt="モビリティ" loading="lazy">
+                </div>
+                <div class="case-content">
+                    <p class="case-category">モビリティ スタートアップ</p>
+                    <h3 class="case-title">ブランディングと獲得の両立。<br>潜在層の購買意欲を喚起</h3>
+                    <div class="case-tags">
+                        <span class="tag">ブランド戦略</span>
+                        <span class="tag">クリエイティブ制作</span>
+                        <span class="tag">動画広告</span>
+                    </div>
+                    <p class="case-description">
+                        機能訴求に偏っていた広告クリエイティブを刷新。「新しい移動体験」という情緒的価値を伝える動画広告を展開し、これまで反応しなかった潜在層の獲得に成功。ブランドの世界観を崩さずに獲得数を伸ばすことに成功しました。
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== METHOD SECTION ==================== -->
     <section id="method" class="section method">
         <div class="container-lg">
-            <div class="method-intro fade-in">
-                <h2 class="section-title">Our Method</h2>
-                <p>3つの柱で、統合的な成長を実現</p>
+            <div class="works-intro fade-in">
+                <h2 class="section-title">Our Services</h2>
+                <p>ARKが提供する3つのソリューション</p>
             </div>
             <div class="method-grid">
                 <div class="method-card fade-in">
-                    <div class="method-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3>Digital Marketing</h3>
-                    <p>アルゴリズムをハックし、最適な配信を行う。データに基づいた広告運用で確実な成果を実現。</p>
-                    <div class="method-number">01</div>
+                    <h3>デジタル広告運用代行</h3>
+                    <p>Meta(Facebook/Instagram)、Google、LINE、TikTokなど、主要媒体の運用を代行します。単なる入札調整だけでなく、事業KGIから逆算した最適なメディアプランニングと、日々の細かい分析・改善を実行します。</p>
                 </div>
                 <div class="method-card fade-in">
-                    <div class="method-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                        </svg>
-                    </div>
-                    <h3>Branded Creative</h3>
-                    <p>ブランドの美学を守り、欲望を喚起する表現を作る。一貫性のあるクリエイティブで信頼を構築。</p>
-                    <div class="method-number">02</div>
+                    <h3>制作・クリエイティブ</h3>
+                    <p>「獲得できる」クリエイティブを制作します。バナー画像、広告用動画、LP（ランディングページ）の制作まで一貫して対応。ABテストを繰り返し、最も成果の出る勝ちパターンを見つけ出します。</p>
                 </div>
                 <div class="method-card fade-in">
-                    <div class="method-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                        </svg>
-                    </div>
-                    <h3>PR / Media Promote</h3>
-                    <p>社会やターゲットのインサイトを捉え、文脈を作る。メディア露出による信頼性の向上を実現。</p>
-                    <div class="method-number">03</div>
+                    <h3>戦略PR・広報支援</h3>
+                    <p>プレスリリースの作成・配信、メディアへの働きかけ（メディアプロモート）を行い、第三者視点での露出を獲得します。広告では届かない層への認知拡大と、ブランドへの信頼性を高めます。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== TEAM SECTION ==================== -->
     <section id="team" class="section team">
         <div class="container-lg">
-            <div class="team-intro fade-in">
-                <h2 class="section-title">Backgrounds</h2>
+            <div class="works-intro fade-in">
+                <h2 class="section-title">Professional Team</h2>
                 <p>
-                    流通、広告、メーカー。<br>
-                    各業界のトップランナー企業で研鑽を積んだエキスパートが集結。
+                    各領域の専門家が、貴社の専任チームを結成します。
                 </p>
             </div>
             <div class="team-grid">
                 <div class="team-card fade-in">
-                    <div class="team-avatar">
-                        <span>01</span>
-                    </div>
-                    <h3 class="team-role">Integrated Marketing Director</h3>
-                    <p class="team-background">Background: <strong>Ex-Amazon</strong></p>
+                    <h3 class="team-role">マーケティング・ディレクター</h3>
+                    <p class="team-background">経歴: <strong>元Amazon Japan マーケティング担当</strong></p>
+                    <p style="margin-top:16px; font-size:0.9rem; color:#4B5563;">大規模なEC運用とデータ分析のスペシャリスト。事業計画に基づいた予算配分とKPI設計を担当。</p>
                 </div>
                 <div class="team-card fade-in">
-                    <div class="team-avatar">
-                        <span>02</span>
-                    </div>
-                    <h3 class="team-role">Creative & Brand Strategist</h3>
-                    <p class="team-background">Background: <strong>Ex-L'Oréal Japan</strong></p>
+                    <h3 class="team-role">ブランド・ストラテジスト</h3>
+                    <p class="team-background">経歴: <strong>元日本ロレアル ブランドマネージャー</strong></p>
+                    <p style="margin-top:16px; font-size:0.9rem; color:#4B5563;">世界的なブランドでの経験を活かし、ブランドの世界観を守りながら売上を作る戦略を立案。</p>
                 </div>
                 <div class="team-card fade-in">
-                    <div class="team-avatar">
-                        <span>03</span>
-                    </div>
-                    <h3 class="team-role">PR Planner / Digital Marketer</h3>
-                    <p class="team-background">Background: <strong>Ex-HAKUHODO</strong></p>
+                    <h3 class="team-role">PRプランナー / 広告運用</h3>
+                    <p class="team-background">経歴: <strong>元博報堂 アカウントプランナー</strong></p>
+                    <p style="margin-top:16px; font-size:0.9rem; color:#4B5563;">マス広告からデジタル、PRまで横断的な知見を持つ。文脈作りと実際の運用実務をブリッジする。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== SERVICE MENU SECTION ==================== -->
-    <section class="section service-menu">
-        <div class="container-lg">
-            <h2 class="section-title fade-in">Service Menu</h2>
-            <div class="service-grid">
-                <div class="service-box fade-in">
-                    <h3>Digital Marketing</h3>
-                    <p>Meta広告、Google広告、LINE広告などの運用代行。データ分析に基づく最適化で、確実な成果を実現します。</p>
-                </div>
-                <div class="service-box fade-in">
-                    <h3>Creative & Development</h3>
-                    <p>LP制作、バナー制作、動画制作。ブランドの世界観を守りながら、CVRを最大化するクリエイティブを提供します。</p>
-                </div>
-                <div class="service-box fade-in">
-                    <h3>Strategic PR</h3>
-                    <p>プレスリリース作成、メディアリレーション、インフルエンサー施策。社会的な文脈を作り、信頼性を向上させます。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== CONTACT SECTION ==================== -->
     <section id="contact" class="section contact">
         <div class="container-md">
-            <h2 class="fade-in">Board the Ark.</h2>
+            <h2 class="section-title fade-in">お問い合わせ</h2>
             <p class="contact-description fade-in">
-                現状の課題をお聞かせください。<br>
-                広告運用からPRの切り口まで、貴社のフェーズに合わせた最適なチームを編成します。
+                マーケティングの課題について、まずはお気軽にご相談ください。<br>
+                現状の数値を分析し、貴社のフェーズに最適なプランをご提案します。
             </p>
             <button class="cta-button fade-in">
-                <span>Contact Form</span>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                お問い合わせフォームへ
             </button>
-            <div class="divider fade-in"></div>
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
     <footer>
         <div class="container-lg">
             <div class="footer-content">
-                <div class="footer-logo">ARK</div>
-                <div class="footer-copyright">© 2025 ARK. All rights reserved.</div>
-                <div class="footer-social">
-                    <a href="#">Twitter</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Instagram</a>
-                </div>
+                <div class="footer-logo">ARK Consulting</div>
+                <div class="footer-copyright">© 2026 ARK Consulting. All rights reserved.</div>
             </div>
         </div>
     </footer>
 
-    <!-- ==================== JAVASCRIPT ==================== -->
     <script>
-        // スクロールでヘッダーに背景を追加
+        // スクロールでヘッダーの見た目を調整
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                header.classList.add('scrolled');
+                header.style.boxShadow = "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
             } else {
-                header.classList.remove('scrolled');
+                header.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.05)";
             }
         });
 
-        // Intersection Observer でフェードインアニメーション
+        // フェードインアニメーション
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -1279,7 +639,6 @@
             });
         }, observerOptions);
 
-        // すべての .fade-in 要素を監視
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
