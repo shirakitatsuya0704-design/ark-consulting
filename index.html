@@ -406,11 +406,34 @@
         .form-select {
             cursor: pointer;
             appearance: none;
+            /* 矢印アイコンの記述はそのまま維持 */
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234B5563'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 16px center;
             background-size: 16px;
+            
+            /* ▼▼▼ ここから変更箇所 ▼▼▼ */
+            
+            width: 100%;
+            padding: 18px;     /* 16px → 18px に拡大 */
+            border: 1px solid #E5E7EB;
+            border-radius: 4px;
+            background-color: #F9FAFB; /* background プロパティを明示的に分割 */
+            
+            font-size: 1.25rem; /* 1rem → 1.25rem に拡大 (約20px) */
+            
+            font-family: inherit;
+            color: #171717;
+            transition: all 0.3s ease;
         }
+
+        /* 念のため option タグ自体も大きく指定（ブラウザによって挙動が異なります） */
+        .form-select option {
+            font-size: 1.25rem; 
+            padding: 10px;
+        }
+
+        /* ▲▲▲ ここまで変更箇所 ▲▲▲ */
 
         .submit-button {
             display: block;
